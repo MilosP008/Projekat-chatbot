@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kućni Ljubimci</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="slike/dog_paw.png" /> 
+		<link rel="stylesheet" type="text/css" href="pocetna.css" />
+	</head>
+	<body>
+		<header>
+			<div id="picture_slider">
+				<img src="slike/dog1.jpg" alt="Slike kućnih ljubimaca" id="slika_naslova" />
+				<div id="audio_off" onclick="audioOff()"><img src="slike/sound_on.png" style="width:16px; height:16px; top: 2px; left: 2px;" alt="Sound button" /></div>
+				<div id="dog" onclick="dog()"></div>
+				<div id="cat" onclick="cat()"></div>
+				<div id="fish" onclick="fish()"></div>
+				<audio id="pets_audio">
+					<source src="zvuci/dog.mp3" type="audio/mpeg" id="pets_source" />
+				</audio>
+			</div>
+			<div id="responsive_nav">
+				<div onclick="prikaziNavigaciju()"><span>&#9660;</span></div>
+				<nav>
+					<div id="vreme"></div>
+					<ul>
+						<li style="background-color: green"><a href="index.html">Početna</a></li>
+						<li><a href="ljubimci/index.html">Ljubimci</a>
+							<ul class="drop_down">
+								<li><a href="ljubimci/index.html#psi">Psi</a></li>
+								<li><a href="ljubimci/index.html#macke">Mačke</a></li>
+								<li><a href="ljubimci/index.html#ribice">Akvarijumske ribice</a></li>
+							</ul>
+						</li>
+						<li><a href="">Hrana</a>
+							<ul class="drop_down">
+								<li><a href="">Hrana za pse</a></li>
+								<li><a href="">Hrana za mačke</a></li>
+								<li><a href="">Hrana za akvarijumske ribice</a></li>
+							</ul>
+						</li>
+						<li><a href="">Igračke</a></li>
+						<li><a href="">Galerija</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<h1>Kućni ljubimci</h1>
+			<section>
+				<h2>Radno vreme</h2>
+				<p style="padding-left: 4%;">Radni dan - 7:30 / 20:00<br />Subota - 7:30 / 13:00<br />Nedelja - Zatvoreno</p>
+				<h2>Rase pasa</h2>
+				<ul>
+					<li style="margin-bottom: 20px;">Nemački ovčar
+						<img src="slike/nemacki_ovcar.jpg" alt="Nemački ovčar" style="width: 200px; float: right;" />
+						<p>Nemački ovčar ili vučjak je rasa pasa selektovana i odgajana za čuvanje stoke, prevashodno ovaca. Nemački ovčar je srednje veličine, 
+						blago izdužen, snažan; kosti su suve, celokupna građa je čvrsta. Nemački ovčar treba da bude smiren: nervno stabilan, siguran u sebe, miran i oprezan. 
+						On mora da poseduje hrabrost, borbenost i oštrinu da bi bio pogodan za raznovrsnu upotrebu posebno kao pratilac, stražar i zaštitnik.</p>
+						<div id="nemacki_ovcar_dugme" onclick="nemackiOvcar()">Opšti podaci</div>
+						<dl id="nemacki_ovcar">
+							<dt>Poreklo</dt>
+							<dd>Nemačka</dd>
+							<dt>Težina</dt>
+							<dd>Mužjak 30 - 40 kg</dd>
+							<dd>Ženka 22 - 32 kg</dd>
+							<dt>Visina</dt>
+							<dd>Mužjak 60 - 65 cm</dd>
+							<dd>Ženka 55 - 60 cm</dd>
+							<dt>Dlaka</dt>
+							<dd>Oštra, gusta</dd>
+							<dt>Boja</dt>
+							<dd>Smeđe-crna</dd>
+							<dt>Životni vek</dt>
+							<dd>9 - 13 godina</dd>
+						</dl>
+					</li>
+					<li style="margin-bottom: 20px;">Labrador
+						<img src="slike/labrador.jpg" alt="Labrador" style="width: 200px; float: right;" />
+						<p>Labrador retriver ili samo labrador je jedan od nekoliko vrsta retrivera, vrsta ptičara. Labrador se smatra za najpopularniju rasu
+						pasa na svetu. Takođe se mnogo koristi i u policiji zbog detekcije i radnih sposobnosti. Veoma su društveni, nežni, pametni, snažni i psi
+						dobre naravi, a generalno se smatraju za dobre čovekove prijatelje svih starosnih doba (uključujući visok nivo tolerancije i strpljenja
+						za decu), i to ih čini odličnim radnim psima. Ovi psi su veoma lojalni i odlični su plivači. Mogu se koristiti u raznim šou-programima.
+						Dobro treniran labrador je jedan od najodgovornijih, najposlušnijih i najtalentovanijih rasa na svetu.</p>
+						<div id="labrador_dugme" onclick="labrador()">Opšti podaci</div>
+						<dl id="labrador">
+							<dt>Poreklo</dt>
+							<dd>Kanada</dd>
+							<dt>Težina</dt>
+							<dd>Mužjak 35 - 40 kg</dd>
+							<dd>Ženka 30 - 35 kg</dd>
+							<dt>Visina</dt>
+							<dd>Mužjak 56 - 58 cm</dd>
+							<dd>Ženka 54 - 56 cm</dd>
+							<dt>Boja</dt>
+							<dd>Jednobojna crna, žuta, čokoladna</dd>
+							<dt>Životni vek</dt>
+							<dd>10 - 14 godina</dd>
+						</dl>
+					</li>
+					<li>Rotvajler
+						<img src="slike/rotvajler.jpg" alt="Rotvajler" style="width: 200px; float: right;" />
+						<p>Rotvajler je rasa domaćeg psa iz grupe pinčera, šnaucera, molosa, švajcarskih pastirskih pasa. Rotvajleri su vrlo cenjeni psi i često se drže
+						kao ljubimci zbog svoje visoke inteligencije, neustrašivosti i velike povezanosti sa vlasnikom. Poznat je kao mesarski pas, jer se navodno
+						u gradu Rotvajl nalazila i značajna korporacija mesara koji su za svoje potrebe koristili rotvajlera. Zanimljivo je da od svih rasa pasa, najjači
+						ugriz ima upravo rotvajler. Trenutno ga koriste u austrijskoj policiji. Smiren, odan i pametan, strpljiv je sa decom, ali može da bude krvoločan
+						sa strancima. Uopšteno govoreći, svojom proporcionalnom staturom, rotvajler daje utisak mišićavog, snažnog, gipkog i izdržljivog psa. Vrat je jak, 
+						ramena su impresivne širine, dok je telo nabijeno. Rotvajler je danas druga najpopularnija rasa u SAD.</p><br/>
+						<div id="rotvajler_dugme" onclick="rotvajler()">Opšti podaci</div>
+						<dl id="rotvajler">
+							<dt>Poreklo</dt>
+							<dd>Nemačka</dd>
+							<dt>Težina</dt>
+							<dd>Mužjak 43 - 60 kg</dd>
+							<dd>Ženka 38 - 52 kg</dd>
+							<dt>Visina</dt>
+							<dd>Mužjak 61 - 69 cm</dd>
+							<dd>Ženka 56 - 63 cm</dd>
+							<dt>Boja</dt>
+							<dd>Crna, plava, žutosmeđa</dd>
+							<dt>Životni vek</dt>
+							<dd>8 - 11 godina</dd>
+						</dl>
+					</li>
+				</ul>
+				<h2>Rase mačaka</h2>
+				<ul>
+					<li>Sijamska mačka</li>
+					<li>Persijska mačka</li>
+					<li>Britanska kratkodlaka mačka</li>
+				</ul>
+			</section>
+		</main>
+		<hr style="border-radius: 50%; height: 4px; width: 95%;" />
+		<footer>
+			<address>
+				&copy; Copyright 2018-<span id="current_year"></span><br />
+				Email: &#9993; milospetrovic008@gmail.com<br />
+				Kontakt: &#9743; 063/XXX XX XX
+			</address>
+		</footer>
+		<div id="sidro"><img src="slike/anchor.png" alt="Sidro" /></div>
+		<script src="pocetna.js"></script>
+		<script type="text/javascript">
+		var headID = document.getElementsByTagName("head")[0];
+		var newCss = document.createElement('link');
+		newCss.rel = 'stylesheet';
+		newCss.type = 'text/css';
+		window._botUsername = '849111';
+		window._botName = 'Laki';
+		newCss.href = "https://rebot.me/assets/css/bot.css";
+		var newScript = document.createElement('script');
+		newScript.src = "https://rebot.me/assets/js/bot.js";
+		newScript.type = 'text/javascript';
+		headID.appendChild(newScript);
+		headID.preppend(newCss);
+		</script>
+	</body>
+</html>

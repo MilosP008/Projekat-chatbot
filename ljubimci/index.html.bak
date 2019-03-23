@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="../" />
+		<title>Kućni Ljubimci</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="slike/dog_paw.png" /> 
+		<link rel="stylesheet" type="text/css" href="pocetna.css" />
+		<link rel="stylesheet" type="text/css" href="ljubimci/ljubimci.css" />
+	</head>
+	<body>
+		<header>
+			<div id="picture_slider">
+				<img src="slike/dog1.jpg" alt="Slike kućnih ljubimaca" id="slika_naslova" />
+				<div id="audio_off" onclick="audioOff()"><img src="slike/sound_on.png" style="width:16px; height:16px; top: 2px; left: 2px;" alt="Sound button" /></div>
+				<div id="dog" onclick="dog()"></div>
+				<div id="cat" onclick="cat()"></div>
+				<div id="fish" onclick="fish()"></div>
+				<audio id="pets_audio">
+					<source src="zvuci/dog.mp3" type="audio/mpeg" id="pets_source" />
+				</audio>
+			</div>
+			<div id="responsive_nav">
+				<div onclick="prikaziNavigaciju()"><span>&#9660;</span></div>
+				<nav>
+					<div id="vreme"></div>
+					<ul>
+						<li><a href="index.html">Početna</a></li>
+						<li style="background-color: green;"><a href="ljubimci/index.html">Ljubimci</a>
+							<ul class="drop_down">
+								<li><a href="ljubimci/index.html#psi">Psi</a></li>
+								<li><a href="ljubimci/index.html#macke">Mačke</a></li>
+								<li><a href="ljubimci/index.html#ribice">Akvarijumske ribice</a></li>
+							</ul>
+						</li>
+						<li><a href="">Hrana</a>
+							<ul class="drop_down">
+								<li><a href="">Hrana za pse</a></li>
+								<li><a href="">Hrana za mačke</a></li>
+								<li><a href="">Hrana za akvarijumske ribice</a></li>
+							</ul>
+						</li>
+						<li><a href="">Igračke</a></li>
+						<li><a href="">Galerija</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<h1>Prodavnica kućnih ljubimaca</h1>
+			<section>
+				<h1 id="psi">Psi</h1>
+				<div id="psi_kontejner">
+					<figure class="psi" width="200px">
+						<figcaption>Boo štene</figcaption>
+						<img src="slike/boo1.jpg" alt="Boo štene" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Pomeranski špic - Boo<br />
+							Pol: Oba pola<br />
+							Cena: 350 &euro;
+						</span>
+						<label for="broj_boo_steneta" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" id="broj_boo_steneta" name="broj_boo_steneta" />
+						<button class="korpa_dugme" name="boo_stene" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="psi" width="200px">
+						<figcaption>Nemački ovčar štene</figcaption>
+						<img src="slike/nemacki_ovcar1.jpg" alt="Nemački ovčar" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Nemački ovčar<br />
+							Pol: Mužjak<br />
+							Cena: 400 &euro;
+						</span>
+						<label for="broj_nemackih_ovcara" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_nemackih_ovcara" />
+						<button class="korpa_dugme" name="nemacki_ovcar_stene" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="psi" width="200px">
+						<figcaption>Sibirski haski</figcaption>
+						<img src="slike/haski1.jpg" alt="Sibirski haski" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Haski (sibirski)<br />
+							Pol: Mužjak<br />
+							Cena: 500 &euro;
+						</span>
+						<label for="broj_sibirskih_haskija" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_sibirskih_haskija" />
+						<button class="korpa_dugme" name="sibirski_haski" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="psi" width="200px">
+						<figcaption>Labrador retriver štene</figcaption>
+						<img src="slike/labrador1.jpg" alt="Labrador retriver štene" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Labrador retriver<br />
+							Pol: Mužjak<br />
+							Cena: 375 &euro;
+						</span>
+						<label for="broj_labrador_retrivera" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_labrador_retrivera" />
+						<button class="korpa_dugme" name="labrador_retriver_stene" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+				</div>
+				<h1 id="macke">Mačke</h1>
+				<div id="macke_kontejner">
+					<figure class="macke" width="200px">
+						<figcaption>Persijska mačka</figcaption>
+						<img src="slike/persijska_macka1.jpg" alt="Persijska mačka" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Persijska mačka<br />
+							Pol: Ženka<br />
+							Cena: 500 &euro;
+						</span>
+						<label for="broj_persijskih_macaka" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_persijskih_macaka" />
+						<button class="korpa_dugme" name="persijska_macka" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="macke" width="200px">
+						<figcaption>Himalajska mačka</figcaption>
+						<img src="slike/himalajska_macka1.jpg" alt="Himalajska mačka" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Himalajska mačka<br />
+							Pol: Mužjak<br />
+							Cena: 300 &euro;
+						</span>
+						<label for="broj_himalajskih_macaka" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_himalajskih_macaka" />
+						<button class="korpa_dugme" name="himalajska_macka" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="macke" width="200px">
+						<figcaption>Sijamska mačka</figcaption>
+						<img src="slike/sijamska_macka1.jpg" alt="Sijamska mačka" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Sijamska mačka<br />
+							Pol: Ženka<br />
+							Cena: 600 &euro;
+						</span>
+						<label for="broj_sijamskih_macaka" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_sijamskih_macaka" />
+						<button class="korpa_dugme" name="sijamska_macka" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="macke" width="200px">
+						<figcaption>Britanska kratkodlaka</figcaption>
+						<img src="slike/britanska_kratkodlaka_macka1.jpg" alt="Britanska kratkodlaka mačka" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Britanska kratkodlaka<br />
+							Pol: Mužjak<br />
+							Cena: 550 &euro;
+						</span>
+						<label for="broj_britanskih_kratkodlakih_macaka" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_britanskih_kratkodlakih_macaka" />
+						<button class="korpa_dugme" name="britanska_kratkodlaka_macka" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+				</div>
+				<h1 id="ribice">Akvarijumske ribice</h1>
+				<div id="ribice_kontejner">
+					<figure class="ribice" width="200px">
+						<figcaption>Platika koralna</figcaption>
+						<img src="slike/platika_koralna1.png" alt="Platika koralna ribica" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Platika koralna<br />
+							Pol: Oba pola<br />
+							Cena: 1 &euro;
+						</span>
+						<label for="broj_platika_koralnih" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_platika_koralnih" />
+						<button class="korpa_dugme" name="platika_koralna" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="ribice" width="200px">
+						<figcaption>Žuti moli</figcaption>
+						<img src="slike/zuti_moli1.jpg" alt="Žuti moli ribica" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Žuti moli<br />
+							Pol: Oba pola<br />
+							Cena: 1 &euro;
+						</span>
+						<label for="broj_zutih_moli" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_zutih_moli" />
+						<button class="korpa_dugme" name="zuti_moli" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="ribice" width="200px">
+						<figcaption>Crveni rak</figcaption>
+						<img src="slike/crveni_rak1.jpg" alt="Crveni rak" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Crveni rak<br />
+							Pol: Oba pola<br />
+							Cena: 5 &euro;
+						</span>
+						<label for="broj_crvenih_rakova" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_crvenih_rakova" />
+						<button class="korpa_dugme" name="crveni_rak" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+					<figure class="ribice" width="200px">
+						<figcaption>Beta</figcaption>
+						<img src="slike/beta1.jpg" alt="Beta ribica" width="200px" height="250px" /><br />
+						<span>
+							Rasa: Beta<br />
+							Pol: Oba pola<br />
+							Cena: 3 &euro;
+						</span>
+						<label for="broj_beta" class="broj_label">Broj: </label>
+						<input type="number" min="0" max="50" class="broj_dugme" name="broj_beta" />
+						<button class="korpa_dugme" name="beta_ribica" onclick="dodajUKorpu(this.name)">Dodaj u korpu</button>
+					</figure>
+				</div>
+			</section>
+			<section>
+				<div id="klizac">
+					<div id="responsive_content" style="width: 100%; height: 100%;" onclick="prikaziPodatke()">
+						<span>&#9658;</span>
+					</div>
+					<div id="licni_podaci">
+						<form method="post" action="#" id="forma" onsubmit="return provera()">
+							<label for="ime"><span style="text-decoration: underline;">I</span>me: </label>
+							<input type="text" id="ime" name="ime" accesskey="i" /><br />
+							<label for="prezime"><span style="text-decoration: underline;">P</span>rezime: </label>
+							<input type="text" name="prezime" accesskey="p" /><br />
+							<label for="mesto_stanovanja"><span style="text-decoration: underline;">M</span>esto stanovanja: </label>
+							<input type="text" name="mesto_stanovanja" accesskey="m" /><br />
+							<label for="ulica_broj"><span style="text-decoration: underline;">U</span>lica i broj: </label>
+							<input type="text" name="ulica_broj" accesskey="u" /><br />
+							<label for="broj_bankovnog_racuna"><span style="text-decoration: underline;">B</span>roj bankovnog računa: </label>
+							<input type="text" name="broj_bankovnog_racuna" accesskey="b" /><br />
+							<input type="submit" value="Kupi" style="width: 100%; cursor: pointer;" />
+						</form>
+						<div id="greske"></div>
+					</div>
+				</div>
+				<div id="korpa_zaglavlje">Korpa</div>
+				<div id="korpa">
+					<ul id="stavke"></ul>
+					<div id="ukupno">Ukupno: 0 € + 20% PDV = 0 €</div>
+				</div>
+				<div id="omotac_ocisti">
+					<button id="korpa_ocisti" onclick="ukloniStavke()">Ukloni sve stavke</button>
+				</div>
+			</section>
+		</main>
+		<hr size="5" width="95%" style="border-radius: 50%" />
+		<footer>
+			<address>
+				&copy; Copyright 2018-<span id="current_year"></span><br />
+				Email: &#9993; milospetrovic008@gmail.com<br />
+				Kontakt: &#9743; 063/XXX XX XX
+			</address>
+		</footer>
+		<div id="sidro"><img src="slike/anchor.png" alt="Sidro" /></div>
+		<script src="pocetna.js"></script>
+		<script src="ljubimci/ljubimci.js"></script>
+	</body>
+</html>

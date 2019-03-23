@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="../" />
+		<title>Kućni Ljubimci</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="slike/dog_paw.png" /> 
+		<link rel="stylesheet" type="text/css" href="pocetna.css" />
+	</head>
+	<body>
+		<header>
+			<div id="picture_slider">
+				<img src="slike/dog1.jpg" alt="Slike kućnih ljubimaca" id="slika_naslova" />
+				<div id="audio_off" onclick="audioOff()"><img src="slike/sound_on.png" style="width:16px; height:16px; top: 2px; left: 2px;" alt="Sound button" /></div>
+				<div id="dog" onclick="dog()"></div>
+				<div id="cat" onclick="cat()"></div>
+				<div id="fish" onclick="fish()"></div>
+				<audio id="pets_audio">
+					<source src="zvuci/dog.mp3" type="audio/mpeg" id="pets_source" />
+				</audio>
+			</div>
+			<nav>
+			<div id="vreme"></div>
+				<ul>
+					<li><a href="index.html">Početna</a></li>
+					<li><a href="ljubimci/index.html">Ljubimci</a>
+						<ul id="drop_down">
+							<li><a href="">Psi</a></li>
+							<li><a href="">Mačke</a></li>
+							<li><a href="">Akvarijumske ribice</a></li>
+						</ul>
+					</li>
+					<li><a href="hrana/index.html">Hrana</a>
+						<ul id="drop_down">
+							<li><a href="">Hrana za pse</a></li>
+							<li><a href="">Hrana za mačke</a></li>
+							<li><a href="">Hrana za akvarijumske ribice</a></li>
+						</ul>
+					</li>
+					<li style="background-color: green;"><a href="igračke/index.html">Igračke</a></li>
+					<li><a href="galerija/index.html">Galerija</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			
+		</main>
+		<hr size="5" width="95%" style="border-radius: 50%" />
+		<footer>
+			<address>
+				Copyright &copy; 2018-<span id="current_year"></span><br />
+				Email: &#9993; milospetrovic008@gmail.com<br />
+				Kontakt: &#9743; 063/123 45 67
+			</address>
+		</footer>
+		<script src="pocetna.js"></script>
+	</body>
+</html>

@@ -1,0 +1,348 @@
+html {
+	background: linear-gradient(to bottom, green, white);
+}
+
+body {
+	margin: 0 10%;
+	height: 100%;
+	box-shadow: -5px 0 15px gray;
+	background-color: white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+header {
+	width: 100%;
+}
+
+#picture_slider {
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+
+header img {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+}
+
+#audio_off {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	background-color: white;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#cat {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	background-color: green;
+	opacity: 0.7;
+}
+
+#dog {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 55px;
+	margin: 0 auto;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	background-color: green;
+	opacity: 1;
+}
+
+#fish {
+	position: absolute;
+	bottom: 10px;
+	left: 55px;
+	right: 0;
+	margin: 0 auto;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	background-color: green;
+	opacity: 0.7;
+}
+
+#dog:hover, #cat:hover, #fish:hover {
+	cursor: pointer;
+	opacity: 1!important;
+}
+
+#responsive_nav > div {
+	display: none;
+}
+
+nav {
+	border-bottom: 1px solid gray;
+}
+
+nav #vreme {
+	float: right;
+	padding: 10px 15px;
+}
+
+nav ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	border-right: 1px solid gray;
+	margin-left: -5px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 10px 15px;
+}
+
+nav ul li a:hover {
+	color: blue;
+}
+
+nav ul li:hover .drop_down {
+	display: block;
+}
+
+.drop_down {
+	position: absolute;
+	margin: 0;
+	top: 100%;
+	border: 1px solid gray;
+	display: none;
+}
+
+.drop_down li {
+	display: block;
+	border-right: none;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.drop_down li a {
+	display: block;
+}
+
+section {
+	padding: 2%;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	padding-left: 2%;
+}
+
+ul li p {
+	margin-right: 25%;
+}
+
+#nemacki_ovcar_dugme, #labrador_dugme, #rotvajler_dugme {
+	clear: right;
+	border-width: 3px;
+	border-style: solid;
+	border-color: lightgreen darkgreen darkgreen lightgreen;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#nemacki_ovcar, #labrador, #rotvajler {
+	display: none;
+	column-count: 3;
+}
+
+footer {
+	padding: 2% 4%;
+	text-align: center;
+}
+
+#sidro {
+	position: fixed;
+	background-color: white;
+	opacity: 0.5;
+	z-index: 3;
+	bottom: 30px;
+	right: 40px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	visibility: hidden;
+}
+
+#sidro:hover {
+	cursor: pointer;
+}
+
+#sidro img {
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	top: 18%;
+	right: 20%;
+}
+
+#sound_button{
+	width:16px;
+	height:16px;
+	top:2px;
+	left:2px;
+}
+	
+#activated_link{
+	background-color:green;
+}
+	
+#radno_vreme{
+	padding-left:4%;
+}
+	
+.rase_pasa{
+	margin-bottom:25px;
+}
+	
+.slike_pasa{
+	width:200px;
+	float:right;
+}
+	
+#divide_line{
+	border-radius:50%;
+	width:95%;
+	height:3px;
+}
+
+#_chatBubble {
+	right: initial!important;
+	left: 2%;
+}
+
+#chatWindow {
+	right: initial!important;
+	left: 2%;
+}
+
+@media only screen and (max-width: 400px), (max-width: 700px) and (orientation: landscape) {
+	body {
+		margin: 0;
+	}
+	
+	#picture_slider {
+		height: 300px;
+	}
+	
+	header img {
+		height: 300px;
+		float: none;
+	}
+	
+	#responsive_nav > div {
+		display: block;
+		position: relative;
+		text-align: center;
+		line-height: 30px;
+		height: 30px;
+		border: 1px solid gray;
+		box-shadow: 0 1px 5px gray;
+	}
+	
+	#responsive_nav > nav {
+		position: absolute;
+		width: 100%;
+	}
+	
+	#responsive_nav > nav ul {
+		box-shadow: 0 1px 5px gray;
+		z-index: 2;
+	}
+	
+	#responsive_nav > nav ul li {
+		display: block;
+		background-color: white;
+		text-align: center;
+		margin-left: 0;
+		border-left: 1px solid gray;
+	}
+	
+	#responsive_nav > nav ul li a {
+		padding: 10px 0px;
+	}
+	
+	#vreme {
+		display: none;
+	}
+	
+	nav ul li:hover .drop_down {
+		display: none;
+	}
+	
+	nav {
+		display: none;
+	}
+	
+	section {
+		padding: 0;
+	}
+	
+	h2 {
+		text-align: center;
+		padding-left: 0;
+	}
+	
+	p {
+		text-align: center;
+		padding-left: 0!important;
+	}
+	
+	ul li p {
+		margin-right: 10%!important;
+	}
+	
+	ul li img {
+		float: none!important;
+		display: block;
+		width: 90%!important;
+		margin-top: 5%;
+	}
+	
+	#nemacki_ovcar_dugme, #labrador_dugme, #rotvajler_dugme {
+		margin-right: 10%;
+	}
+	
+	#nemacki_ovcar, #labrador, #rotvajler {
+		column-count: 2;
+		margin-right: 10%;
+	}
+	
+	#sidro {
+		display: none;
+	}
+}
