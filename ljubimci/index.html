@@ -247,5 +247,19 @@
 		<div id="sidro"><img src="slike/anchor.png" alt="Sidro" /></div>
 		<script src="pocetna.js"></script>
 		<script src="ljubimci/ljubimci.js"></script>
+		<script type="text/javascript">
+		var headID = document.getElementsByTagName("head")[0];
+		var newCss = document.createElement('link');
+		newCss.rel = 'stylesheet';
+		newCss.type = 'text/css';
+		window._botUsername = '849111';
+		window._botName = 'Laki';
+		newCss.href = "https://rebot.me/assets/css/bot.css";
+		var newScript = document.createElement('script');
+		newScript.src = "https://rebot.me/assets/js/bot.js";
+		newScript.type = 'text/javascript';
+		headID.appendChild(newScript);
+		headID.prepend(newCss);
+		</script>
 	</body>
 </html>

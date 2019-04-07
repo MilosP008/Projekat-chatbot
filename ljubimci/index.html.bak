@@ -214,13 +214,13 @@
 							<label for="ime"><span style="text-decoration: underline;">I</span>me: </label>
 							<input type="text" id="ime" name="ime" accesskey="i" /><br />
 							<label for="prezime"><span style="text-decoration: underline;">P</span>rezime: </label>
-							<input type="text" name="prezime" accesskey="p" /><br />
+							<input type="text" id="prezime" name="prezime" accesskey="p" /><br />
 							<label for="mesto_stanovanja"><span style="text-decoration: underline;">M</span>esto stanovanja: </label>
-							<input type="text" name="mesto_stanovanja" accesskey="m" /><br />
+							<input type="text" id="mesto_stanovanja" name="mesto_stanovanja" accesskey="m" /><br />
 							<label for="ulica_broj"><span style="text-decoration: underline;">U</span>lica i broj: </label>
-							<input type="text" name="ulica_broj" accesskey="u" /><br />
+							<input type="text" id="ulica_broj" name="ulica_broj" accesskey="u" /><br />
 							<label for="broj_bankovnog_racuna"><span style="text-decoration: underline;">B</span>roj bankovnog računa: </label>
-							<input type="text" name="broj_bankovnog_racuna" accesskey="b" /><br />
+							<input type="text" id="broj_bankovnog_racuna" name="broj_bankovnog_racuna" accesskey="b" /><br />
 							<input type="submit" value="Kupi" style="width: 100%; cursor: pointer;" />
 						</form>
 						<div id="greske"></div>
